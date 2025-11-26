@@ -1,0 +1,170 @@
+/* Reset and global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* 🔹 Back Button (matches homepage buttons) */
+.back-btn {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background: transparent;
+  border: 2px solid #2196F3;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.back-btn:hover {
+  background-color: rgba(33, 150, 243, 0.15);
+  box-shadow: 0 0 15px rgba(33, 150, 243, 0.6),
+              0 0 30px rgba(33, 150, 243, 0.4);
+  transform: translateY(-3px);
+}
+
+/* 🔹 Project Section */
+.project-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  padding: 120px 8%;
+  z-index: 10;
+}
+
+.project-content {
+  max-width: 900px;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 60px 50px;
+  box-shadow: 0 0 30px rgba(33, 150, 243, 0.3);
+  animation: fadeIn 1.2s ease;
+}
+
+/* 🔹 Title and Subheadings */
+.project-content h1 {
+  font-size: 58px;
+  color: #2196F3;
+  text-shadow: 0 0 20px rgba(33, 150, 243, 0.6);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.project-content h2 {
+  font-size: 22px;
+  margin-top: 10px;
+  color: #f1f1f1;
+}
+
+.project-content .tools,
+.project-content .lan {
+  color: #c41e3a;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* 🔹 Section Headings */
+.project-content .overview,
+.project-content .res,
+.project-content .key,
+.project-content .ilearn {
+  color: #2196F3;
+  font-weight: 700;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 15px rgba(33, 150, 243, 0.5);
+}
+
+/* 🔹 Paragraphs */
+.project-content p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #dddddd;
+  margin-bottom: 20px;
+}
+
+/* 🔹 Bullet-style paragraphs */
+.project-content .responsibilities,
+.project-content .KeyFeatures {
+  white-space: pre-line;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #d8d8d8;
+}
+
+/* 🔹 Video */
+.project-video {
+  display: block;
+  margin: 50px auto 0;
+  border-radius: 20px;
+  border: 2px solid rgba(33, 150, 243, 0.4);
+  box-shadow: 0 0 30px rgba(33, 150, 243, 0.4);
+  width: 30%;
+  max-width: 800px;
+}
+
+/* 🔹 Top-left logo */
+.top-left-image {
+  position: absolute;
+  top: 60px;
+  left: 80px;
+  width: 180px;       /* Increased size */
+  height: 180px;      /* Keep proportions */
+  border-radius: 15px;
+  object-fit: cover;
+  filter: drop-shadow(0 0 20px rgba(33, 150, 243, 0.6));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.top-left-image:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 30px rgba(33, 150, 243, 0.8));
+}
+
+/* 🔹 Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🔹 Responsive */
+@media (max-width: 768px) {
+  .project-content {
+    padding: 40px 25px;
+  }
+
+  .project-content h1 {
+    font-size: 38px;
+  }
+
+  .project-content h2 {
+    font-size: 18px;
+  }
+
+  .project-video {
+    width: 100%;
+  }
+
+  .back-btn {
+    padding: 10px 25px;
+    font-size: 15px;
+  }
+}
