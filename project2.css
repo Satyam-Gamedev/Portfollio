@@ -121,19 +121,28 @@ body {
   max-width: 800px;
 }
 
-/* 🔹 Top-left logo */
 .top-left-image {
   position: absolute;
   top: 60px;
   left: 80px;
-  width: 180px;       /* Increased size */
-  height: 180px;      /* Keep proportions */
+  width: 180px;
+  height: 180px;
   border-radius: 15px;
   object-fit: cover;
   filter: drop-shadow(0 0 20px rgba(33, 150, 243, 0.6));
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
+/* 📱 Mobile Fix */
+@media (max-width: 600px) {
+  .top-left-image {
+    top: -60px;
+    left: 25%;
+    transform: translateX(-50%);  /* centers image horizontally */
+    width: 140px;
+    height: 140px;
+  }
+}
 .top-left-image:hover {
   transform: scale(1.08);
   filter: drop-shadow(0 0 30px rgba(33, 150, 243, 0.8));
@@ -168,3 +177,4 @@ body {
     font-size: 15px;
   }
 }
+
